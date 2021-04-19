@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="my-wrap">
+    <Nav style=""/>
+    <Body style="flex:1"/>  
+  </div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Nav from './components/Nav.vue';
+import Body from './components/Body.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Nav,
+    Body
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+body,html{
+  height: 100%;
+}
+.my-wrap {
+  
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #2c3e50; */
+ 
+}
+#app{
+  height: 100%;
+  text-align: center;
 }
 </style>
